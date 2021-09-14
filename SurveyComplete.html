@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <script type="text/javascript">		
+	<script type="text/javascript">
+		
 		$(document).ready(function () {
-			parent.postMessage("SurveyDone","https://localhost:44396");
+			window.parent.postMessage("SurveyDone","https://localhost:44396");
 		});
+
 	</script>
     <style>
         body {
@@ -16,7 +18,7 @@
         }
     </style>
 </head>
-<body>    
-    <div id="content-window">Thank You for the feedback!</div> 
+<body onload="load()">    
+    <div id="content-window" onload="load()">Thank You for the feedback!</div> 
 </body>
 </html>
